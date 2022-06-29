@@ -25,9 +25,9 @@ const AutoParks = () => {
                                                                             onClick={() => showCars(value.id)}/></div>)}
             {cars.map(value => <div key={value.id}>{value.brand} -- {value.price}$ -- {value.year}year<input
                 type={"button"} value={"delete Car"}
-                onClick={() => {
-                    deleteCar(value.id)
-                    showCars(value.auto_park_id)
+                onClick={async () => {
+                    await deleteCar(value.id)
+                    await showCars(value.auto_park_id)
                 }}/></div>)}
         </div>
     );
