@@ -22,9 +22,6 @@ const AutoParks = () => {
         const [brand, price, year] = [prompt('brand?'), prompt('price?'), prompt('year?')]
 
         const car = {"brand": String(brand), "price": Number(price), "year": Number(year)}
-        // localhost:8000/auto_parks/2/cars
-        console.log(car);
-        console.log(parkId);
         carService.postCar(parkId, {car})
 
     }
